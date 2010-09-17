@@ -537,6 +537,22 @@ class CI_Loader {
 	// --------------------------------------------------------------------
 
 	/**
+	 * Get Package Paths
+	 *
+	 * Get an array of package paths
+	 *
+	 * @access	public
+	 * @param	string
+	 * @return	void
+	 */
+	function get_package_paths($include_system = FALSE)
+	{
+		return $include_system === TRUE ? $this->_ci_library_paths : $this->_ci_model_paths;
+	}
+	
+	// --------------------------------------------------------------------
+
+	/**
 	 * Remove Package Path
 	 *
 	 * Remove a path from the library, model, and helper path arrays if it exists
